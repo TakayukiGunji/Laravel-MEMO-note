@@ -6,8 +6,9 @@ Desktop.ini
 # Visual Studio Code関連の不要なファイル
 .vscode/
 
-# Laravel（PHPプロジェクト）なら以下も追加
-vendor/
+# Laravel関連の不要なファイル
+/vendor/
 node_modules/
 .env
 storage/
+*.sqlite*
