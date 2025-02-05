@@ -1,0 +1,13 @@
+# Windows関連の不要なファイル
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Visual Studio Code関連の不要なファイル
+.vscode/
+
+# Laravel（PHPプロジェクト）なら以下も追加
+vendor/
+node_modules/
+.env
+storage/
