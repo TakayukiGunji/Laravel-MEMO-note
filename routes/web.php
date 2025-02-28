@@ -13,3 +13,7 @@ Route::get('/hello', function () {
 use App\Http\Controllers\UserController;
 
 Route::get('/users', [UserController::class, 'index']);
+
+use App\Http\Controllers\ScraperController;
+
+Route::get('/scrape', [ScraperController::class, 'scrape']);

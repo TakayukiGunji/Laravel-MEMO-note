@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+body {
+    /* font-family: sans-serif; */
+    font-family: cursive;
+}
+
+body header h1 {
+    font-size: 25px;
+    width: 400px;
+    height: 40px;
+    margin: 13px 50px 20px 0;
+    padding: 0;
+    text-align: center;
+    float: left;
+}
+
+body header h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+body header h1 a:hover {
+    color: red;
+}
+
+body nav ul li {
+    list-style-type: none;
+    width: 130px;
+    height: 40px;
+    margin: 20px 10px 20px 0;
+    color: silver;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#navlist {
+    display: flex;
+}
+
+body nav ul li a {
+    text-decoration: none;
+}
+
+body nav ul li a:hover {
+    color: pink;
+}
+
+body div #contents {
+    margin-left: 50px;
+}
+
+.flower img {
+    width: 80%;
+    border-radius: 50px;
+}
+
+#main h1 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-left: 50px;
+}
+
+#learning_book {
+    display: flex;
+}
+
+.book img {
+    width: 300px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.book article {
+    margin-left: 35px;
+}
+
+div #main {
+    margin-left: 50px;
+}
+
+#three_type {
+    margin-top: 150px;
+    margin-left: 350px;
+    margin-bottom: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 0;
+    /* background-color: rgba(255, 0, 0, 0.1); */
+}
+
+#three_type p {
+    font-size: 20px;
+}
+
+#three_type div ul li {
+    list-style-type: none;
+    font-size: 200%;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+div #main h2 {
+    margin-top: 40px;
+}
+
+#map img,
+#music img {
+    width: 400px;
+    height: auto;
+    margin-top: 0;
+    margin-left: 0;
+    padding-top: 0;
+}
+
+
+div #main p span {
+    font-size: 120%;
+    font-weight: bold;
+    color: red;
+}
+
+#watch,
+#listen,
+#do {
+    margin-top: 10px;
+    margin-right: auto;
+}
+
+#onetwothree {
+    display: flex;
+    margin-top: 160px;
+    margin-bottom: 150px;
+}
+
+#watch_study {
+    background-image: url(../image/OTMS/map.png);
+    background-size: 300px auto;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: rgba(255, 255, 255, 0.3);
+    background-blend-mode: lighten;
+}
+
+#listen_study {
+    background-image: url(../image/OTMS/music.png);
+    background-size: 250px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: lighten;
+}
+
+#do_study {
+    background-image: url(../image/OTMS/羽ペン.jpg);
+    background-size: 100px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    background-blend-mode: lighten;
+}
+
+#watch_study p {
+    font-weight: bold;
+}
+
+#listen_study p {
+    font-weight: bold;
+}
+
+#do_study p {
+    font-weight: bold;
+}
+
+#three_type div p {
+    font-weight: bold;
+}
+
+#main {
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+}
+
+#onetwothree, #learning_book {
+    scroll-snap-align: start;
+    height: 100vh;
+  }
+
+#main::-webkit-scrollbar {
+    display: none;
+}
