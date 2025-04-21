@@ -9,6 +9,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('admin/member', function () {
+    return view('admin.member');
+});
+
 //Firstを作成
 // url, localhost/firstにアクセスされたら
 // アクセスさせるURL
