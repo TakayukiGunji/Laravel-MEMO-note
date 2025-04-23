@@ -12,4 +12,9 @@
             </div>
         </div>
     </div>
+
+    <div>
+        <livewire:memo-form />
+    </div>
+
 </x-app-layout>

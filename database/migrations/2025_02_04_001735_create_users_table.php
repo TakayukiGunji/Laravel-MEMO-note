@@ -15,7 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamps();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password'); // ←これを追加！！
+            $table->rememberToken();    // ← Laravelのお決まりトークン（login記憶用）
+            $table->timestamps();       // ← created_at, updated_at を自動生成
         });
     }
 

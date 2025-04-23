@@ -2,11 +2,15 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laravelへようこそ！</title>
+    <title>Livewire Test</title>
+    @livewireStyles
 </head>
 <body>
-    <h1>Laravelを始めよう！</h1>
-    <p>これは最初のページです。</p>
+    <h1>Livewireテスト</h1>
+
+    <livewire:hello-test />
+
+    @livewireScripts
+    <script src="https://unpkg.com/@livewire/livewire@3.x/dist/livewire.min.js"></script>
 </body>
 </html>

@@ -2,32 +2,22 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
+use App\Http\Livewire\HelloTest;
 
-// ルートディレクトリにアクセスされたらviewディレクトリのwelcome.blade.phpを開く
+// ✅ トップページで Livewire の HelloTest コンポーネントを直接表示
+Route::get('/', HelloTest::class);
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+// ✅ 他のルートはそのまま残す
 Route::get('admin/member', function () {
     return view('admin.member');
 });
 
-//Firstを作成
-// url, localhost/firstにアクセスされたら
-// アクセスさせるURL
-// index：メソッド
+// ✅ FirstController 経由のルーティング
+Route::controller(FirstController::class)->group(function () {
+    Route::get('first', 'index');
+});
 
-// controllerにアクセスしたらファーストコントローラークラスを呼び出す
-// 呼び出したい処理をグループ化
-// firstにアクセスされたらindexに接続
-
-Route::controller ( Firstcontroller::class ) -> group ( function ( ) {
-    Route::get ( 'first', 'index' );
-} );
-
-// Route::get ( 'first', [ FirstController::class, 'index']);
-// 上と同じ処理
+// ✅ Jetstream 認証後のダッシュボード
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
