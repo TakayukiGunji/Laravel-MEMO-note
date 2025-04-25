@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 use App\Http\Livewire\MemoForm;
@@ -22,8 +23,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        Carbon::setLocale('ja'); // ← これ追加！
         // 👇 ここに Livewire のコンポーネント登録を書く！
+        
         Livewire::component('memo-form', MemoForm::class);
         Livewire::component('memo-list', MemoList::class);
+        
     }
 }

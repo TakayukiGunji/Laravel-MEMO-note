@@ -8,9 +8,10 @@
 <body>
     <h1>Livewireテスト</h1>
 
-    <livewire:hello-test />
+    <livewire:memo-form />
+    <livewire:memo-list />
 
     @livewireScripts
-    <script src="https://unpkg.com/@livewire/livewire@3.x/dist/livewire.min.js"></script>
+    <!-- <script src="https://unpkg.com/@livewire/livewire@3.x/dist/livewire.min.js"></script> -->
 </body>
 </html>

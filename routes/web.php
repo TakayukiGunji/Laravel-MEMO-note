@@ -2,10 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
-use App\Http\Livewire\HelloTest;
+// use App\Http\Livewire\HelloTest;
+use App\Http\Livewire\MemoForm;
 
-// ✅ トップページで Livewire の HelloTest コンポーネントを直接表示
-Route::get('/', HelloTest::class);
+// // ✅ トップページで Livewire の HelloTest コンポーネントを直接表示
+// Route::get('/', HelloTest::class);
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/', MemoForm::class);
+});// ← 入力フォームが表示される
+
 
 // ✅ 他のルートはそのまま残す
 Route::get('admin/member', function () {

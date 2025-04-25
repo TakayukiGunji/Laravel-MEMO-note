@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <title>Livewire Layout</title>
     @livewireStyles
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="min-h-screen bg-gradient-to-b from-neutral-200 to-neutral-50">
     {{ $slot }}
 
     @livewireScripts
-    <script src="https://unpkg.com/@livewire/livewire@3.x/dist/livewire.min.js"></script>
+    {{-- 絶対に下記は入れない！！ --}}
+    <!-- {{-- <script src="https://unpkg.com/..."> はLaravelが内部処理として扱うことがあります --}} -->
 </body>
 </html>

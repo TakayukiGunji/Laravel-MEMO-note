@@ -1,3 +1,3 @@
 <div>
-    <h2>Livewire動いてるぞ！！🎉</h2>
+    <h2 style="color: green;">Livewire動いてるぞ！！🎉</h2>
 </div>

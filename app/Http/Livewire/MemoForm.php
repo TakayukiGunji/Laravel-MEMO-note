@@ -3,9 +3,11 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use Livewire\Attributes\Layout;
 use App\Models\Memo;
 use Illuminate\Support\Facades\Auth;
 
+#[Layout('layouts.app')]
 class MemoForm extends Component
 {
     public $title = '';
